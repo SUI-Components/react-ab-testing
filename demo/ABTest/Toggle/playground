@@ -1,0 +1,22 @@
+const variations = [
+  <button key="A" variationId="A">Variation A</button>,
+  <button key="B" variationId="B">Variation B</button>,
+  <button key="C" variationId="C">Variation C</button>,
+  <button key="default" defaultVariation >Default Variation</button>
+]
+return (<section>
+  <h2>Picking specific variation</h2>
+  <p>When variation is defined, the component with correspondent variationId should be show.</p>
+  <p>
+    <AbTestToggle variation="B">
+      {variations}
+    </AbTestToggle>
+  </p>
+  <h2>Variation not specified</h2>
+  <p>When variation is NOT defined, the component with defaultVariation should be shown.</p>
+  <p>
+    <AbTestToggle>
+      {variations}
+    </AbTestToggle>
+  </p>
+</section>)
