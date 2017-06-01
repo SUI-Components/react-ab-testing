@@ -1,0 +1,44 @@
+{
+  "name": "react-ab-testing",
+  "version": "1.0.0",
+  "description": "Ab testing components for react",
+  "main": "index.js",
+  "scripts": {
+    "phoenix": "rm -Rf node_modules && npm i && suistudio clean-modules && suistudio run-all npm i",
+    "co": "crm commit",
+    "lint": "suistudio run-all ../../../node_modules/.bin/linting-rules js",
+    "start": "NODE_ENV=development suistudio start"
+  },
+  "repository": {},
+  "author": "David Almeida <davidbarna@gmail.com>",
+  "license": "ISC",
+  "bugs": {},
+  "devDependencies": {
+    "@schibstedspain/suistudio-fatigue-dev": "github:SUI-Components/suistudio-fatigue-dev",
+    "@schibstedspain/commit-release-manager": "0.1"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "commit-msg": [
+    "validate-commit-msg"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/@schibstedspain/linting-rules/eslintrc.js"
+    ]
+  },
+  "config": {
+    "suistudio": {
+      "name": "AB Testing"
+    },
+    "cz-customizable": {
+      "types": "../../@schibstedspain/commit-release-manager/src/types.json"
+    },
+    "commit-release-manager": {
+      "packagesFolder": "components",
+      "deepLevel": 2
+    }
+  }
+}
