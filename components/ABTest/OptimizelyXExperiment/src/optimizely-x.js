@@ -9,7 +9,7 @@ class OptimizelyXExperimentsService {
 
   static async isActivated (experimentId) {
     let info = await this.getInfo(experimentId) || {}
-    return info.isActive || false
+    return (info.isActive && !info.isInExperimentHoldback) || false
   }
 
   static async getVariation (experimentId) {

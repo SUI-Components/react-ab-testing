@@ -2,7 +2,8 @@
 const experimentsInfo = {
    40000:{
       id:"8401924730",
-      isActive:true,
+      isActive: true,
+      isInExperimentHoldback: false,
       variation:{
          id:"400002",
          name:"Variation #2"

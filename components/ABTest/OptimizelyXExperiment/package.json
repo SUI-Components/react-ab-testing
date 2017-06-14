@@ -1,7 +1,7 @@
 {
   "name": "@schibstedspain/react-ab-testing-optimizely-x",
   "version": "1.2.0",
-  "description": "",
+  "description": "<AbTestOptimizelyXExperiment experimentId />",
   "main": "lib/index.js",
   "scripts": {
     "build": "rm -Rf ./lib && mkdir -p ./lib && npm run babel && npm run sass",
@@ -12,7 +12,7 @@
     "postversion": "git add ${PWD} && git commit -m \"release(ABTest/OptimizelyXExperiment): v$(node -p -e \"require('./package.json').version\")\" && git push origin master && npm publish"
   },
   "keywords": [],
-  "author": "",
+  "author": "David Almeida <davidbarna@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "@schibstedspain/react-ab-testing-toggle": "1.2",
