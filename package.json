@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "phoenix": "rm -Rf node_modules && npm i && suistudio clean-modules && suistudio run-all npm i",
-    "co": "crm commit",
+    "co": "sui-studio commit",
     "lint": "suistudio run-all ../../../node_modules/.bin/linting-rules js",
     "start": "NODE_ENV=development suistudio start"
   },
@@ -14,8 +14,8 @@
   "license": "ISC",
   "bugs": {},
   "devDependencies": {
-    "@schibstedspain/suistudio-fatigue-dev": "github:SUI-Components/suistudio-fatigue-dev",
-    "@schibstedspain/commit-release-manager": "0.1"
+    "@schibstedspain/sui-studio": "4",
+    "@schibstedspain/suistudio-fatigue-dev": "github:SUI-Components/suistudio-fatigue-dev"
   },
   "pre-commit": [
     "lint",
@@ -36,7 +36,8 @@
     "cz-customizable": {
       "types": "../../@schibstedspain/commit-release-manager/src/types.json"
     },
-    "commit-release-manager": {
+    "sui-mono": {
+      "access": "public",
       "packagesFolder": "components",
       "deepLevel": 2
     }
