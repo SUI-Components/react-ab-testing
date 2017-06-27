@@ -4,7 +4,7 @@
   "description": "Ab testing components for react",
   "main": "index.js",
   "scripts": {
-    "phoenix": "rm -Rf node_modules && npm i && suistudio clean-modules && suistudio run-all npm i",
+    "phoenix": "rm -Rf node_modules && npm i && sui-studio clean-modules && sui-studio run-all npm i",
     "co": "sui-studio commit",
     "lint": "sui-lint js && sui-lint sass",
     "start": "NODE_ENV=development suistudio start",
@@ -13,12 +13,11 @@
   },
   "repository": {},
   "author": "David Almeida <davidbarna@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {},
   "devDependencies": {
     "@schibstedspain/sui-precommit": "2.3.0",
     "@schibstedspain/sui-studio": "4",
-    "@schibstedspain/suistudio-fatigue-dev": "github:SUI-Components/suistudio-fatigue-dev",
     "husky": "0.13.4",
     "validate-commit-msg": "2.12.2"
   },
@@ -28,7 +27,7 @@
     ]
   },
   "config": {
-    "suistudio": {
+    "sui-studio": {
       "name": "AB Testing"
     },
     "sui-mono": {
