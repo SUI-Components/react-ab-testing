@@ -6,16 +6,19 @@
   "scripts": {
     "phoenix": "rm -Rf node_modules && npm i && suistudio clean-modules && suistudio run-all npm i",
     "co": "sui-studio commit",
-    "lint": "suistudio run-all ../../../node_modules/.bin/linting-rules js",
-    "start": "NODE_ENV=development suistudio start"
+    "lint": "sui-lint js && sui-lint sass",
+    "start": "NODE_ENV=development suistudio start",
+    "precommit": "sui-precommit run"
   },
   "repository": {},
   "author": "David Almeida <davidbarna@gmail.com>",
   "license": "ISC",
   "bugs": {},
   "devDependencies": {
+    "@schibstedspain/sui-precommit": "2.3.0",
     "@schibstedspain/sui-studio": "4",
-    "@schibstedspain/suistudio-fatigue-dev": "github:SUI-Components/suistudio-fatigue-dev"
+    "@schibstedspain/suistudio-fatigue-dev": "github:SUI-Components/suistudio-fatigue-dev",
+    "husky": "0.13.4"
   },
   "pre-commit": [
     "lint",
@@ -26,7 +29,7 @@
   ],
   "eslintConfig": {
     "extends": [
-      "./node_modules/@schibstedspain/linting-rules/eslintrc.js"
+      "./node_modules/@schibstedspain/sui-lint/eslintrc.js"
     ]
   },
   "config": {
