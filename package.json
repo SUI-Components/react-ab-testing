@@ -8,6 +8,7 @@
     "co": "sui-studio commit",
     "lint": "sui-lint js && sui-lint sass",
     "start": "NODE_ENV=development suistudio start",
+    "commitmsg": "validate-commit-msg",
     "precommit": "sui-precommit run"
   },
   "repository": {},
@@ -18,15 +19,9 @@
     "@schibstedspain/sui-precommit": "2.3.0",
     "@schibstedspain/sui-studio": "4",
     "@schibstedspain/suistudio-fatigue-dev": "github:SUI-Components/suistudio-fatigue-dev",
-    "husky": "0.13.4"
+    "husky": "0.13.4",
+    "validate-commit-msg": "2.12.2"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
-  "commit-msg": [
-    "validate-commit-msg"
-  ],
   "eslintConfig": {
     "extends": [
       "./node_modules/@schibstedspain/sui-lint/eslintrc.js"
@@ -36,13 +31,13 @@
     "suistudio": {
       "name": "AB Testing"
     },
-    "cz-customizable": {
-      "types": "../../@schibstedspain/commit-release-manager/src/types.json"
-    },
     "sui-mono": {
       "access": "public",
       "packagesFolder": "components",
       "deepLevel": 2
+    },
+    "validate-commit-msg": {
+      "types": "@schibstedspain/sui-mono/src/types"
     }
   }
 }
