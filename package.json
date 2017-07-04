@@ -4,41 +4,39 @@
   "description": "Ab testing components for react",
   "main": "index.js",
   "scripts": {
-    "phoenix": "rm -Rf node_modules && npm i && suistudio clean-modules && suistudio run-all npm i",
-    "co": "crm commit",
-    "lint": "suistudio run-all ../../../node_modules/.bin/linting-rules js",
-    "start": "NODE_ENV=development suistudio start"
+    "phoenix": "rm -Rf node_modules && npm i && sui-studio clean-modules && sui-studio run-all npm i",
+    "co": "sui-studio commit",
+    "lint": "sui-lint js && sui-lint sass",
+    "start": "NODE_ENV=development suistudio start",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "sui-precommit run"
   },
   "repository": {},
   "author": "David Almeida <davidbarna@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {},
   "devDependencies": {
-    "@schibstedspain/suistudio-fatigue-dev": "github:SUI-Components/suistudio-fatigue-dev",
-    "@schibstedspain/commit-release-manager": "0.1"
+    "@schibstedspain/sui-precommit": "2.3.0",
+    "@schibstedspain/sui-studio": "4",
+    "husky": "0.13.4",
+    "validate-commit-msg": "2.12.2"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
-  "commit-msg": [
-    "validate-commit-msg"
-  ],
   "eslintConfig": {
     "extends": [
-      "./node_modules/@schibstedspain/linting-rules/eslintrc.js"
+      "./node_modules/@schibstedspain/sui-lint/eslintrc.js"
     ]
   },
   "config": {
-    "suistudio": {
+    "sui-studio": {
       "name": "AB Testing"
     },
-    "cz-customizable": {
-      "types": "../../@schibstedspain/commit-release-manager/src/types.json"
-    },
-    "commit-release-manager": {
+    "sui-mono": {
+      "access": "public",
       "packagesFolder": "components",
       "deepLevel": 2
+    },
+    "validate-commit-msg": {
+      "types": "@schibstedspain/sui-mono/src/types"
     }
   }
 }
