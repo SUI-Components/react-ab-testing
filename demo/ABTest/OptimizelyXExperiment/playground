@@ -1,4 +1,3 @@
-
 const experimentsInfo = {
    40000:{
       id:"8401924730",
@@ -17,20 +16,20 @@ window.optimizely = {
 
 return (<section>
   <h2>Inactive OptimizelyX Experiment</h2>
-  <p>When experiment is not active, no variation should be assigned.</p>
+  <p>When experiment is not active or OptimizelyX API is not available, no variation should be assigned.</p>
   <AbTestOptimizelyXExperiment experimentId={30000}>
-    <button variationId={300000} defaultVariation>Variation Default (Expected)</button>
-    <button variationId={300001}>Variation A (Not Expected)</button>
-    <button variationId={300002}>Variation B (Not Expected)</button>
-    <button variationId={300003}>Variation C (Not Expected)</button>
+    <button variationId={300000} defaultVariation>Original (Expected)</button>
+    <button variationId={300001}>Variation #1 (Not Expected)</button>
+    <button variationId={300002}>Variation #2 (Not Expected)</button>
+    <button variationId={300003}>Variation #3 (Not Expected)</button>
   </AbTestOptimizelyXExperiment>
 
   <h2>Active OptimizelyX Experiment</h2>
   <p>When experiment is active, it should show the accurate variation.</p>
   <AbTestOptimizelyXExperiment experimentId={40000}>
-    <button variationId={400000} defaultVariation>Variation Default (Not Expected)</button>
-    <button variationId={400001}>Variation A (Not Expected)</button>
-    <button variationId={400002}>Variation B (Expected)</button>
-    <button variationId={400003}>Variation C (Not Expected)</button>
+    <button variationId={400000} defaultVariation>Original (Not Expected)</button>
+    <button variationId={400001}>Variation #1 (Not Expected)</button>
+    <button variationId={400002}>Variation #2 (Expected)</button>
+    <button variationId={400003}>Variation #3 (Not Expected)</button>
   </AbTestOptimizelyXExperiment>
 </section>)

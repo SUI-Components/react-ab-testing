@@ -1,22 +1,25 @@
 const variations = [
-  <button key="A" variationId="A">Variation A</button>,
-  <button key="B" variationId="B">Variation B</button>,
-  <button key="C" variationId="C">Variation C</button>,
-  <button key="default" defaultVariation >Default Variation</button>
+  <button key="A" style={{color: 'green'}} variationId="A" >Green Button (A)</button>,
+  <button key="B" style={{color: 'blue'}} variationId="B" >Blue Button (B)</button>,
+  <button key="C" style={{color: 'orange'}} variationId="C" >Orange Button (C)</button>,
+  <button key="default" style={{color: 'black'}} defaultVariation >Black Button</button>,
 ]
+
+
 return (<section>
   <h2>Picking specific variation</h2>
   <p>When variation is defined, the component with correspondent variationId should be show.</p>
-  <p>
-    <AbTestToggle variation="B">
-      {variations}
-    </AbTestToggle>
-  </p>
+  <AbTestToggle variation="B">
+    {variations}
+  </AbTestToggle>
   <h2>Variation not specified</h2>
   <p>When variation is NOT defined, the component with defaultVariation should be shown.</p>
-  <p>
-    <AbTestToggle>
-      {variations}
-    </AbTestToggle>
-  </p>
+  <AbTestToggle>
+    {variations}
+  </AbTestToggle>
+  <h2>Variation not found</h2>
+  <p>When variation is defined but does not exist, nothing is displayed.</p>
+  <AbTestToggle variation="D">
+    {variations}
+  </AbTestToggle>
 </section>)

@@ -7,7 +7,8 @@
     "phoenix": "rm -Rf node_modules && npm i && sui-studio clean-modules && sui-studio run-all npm i",
     "co": "sui-studio commit",
     "lint": "sui-lint js && sui-lint sass",
-    "start": "NODE_ENV=development suistudio start",
+    "start": "NODE_ENV=development sui-studio start",
+    "test": "jest",
     "commitmsg": "validate-commit-msg",
     "precommit": "sui-precommit run"
   },
@@ -18,7 +19,12 @@
   "devDependencies": {
     "@schibstedspain/sui-precommit": "2.3.0",
     "@schibstedspain/sui-studio": "4",
+    "babel-jest": "20.0.3",
+    "enzyme": "2.9.1",
     "husky": "0.13.4",
+    "jest": "20.0.4",
+    "react-addons-test-utils": "15.6.0",
+    "regenerator-runtime": "0.10.5",
     "validate-commit-msg": "2.12.2"
   },
   "eslintConfig": {

@@ -1,5 +1,4 @@
 /* eslint handle-callback-err: "off" */
-
 import React, {Component, PropTypes} from 'react'
 import AbTestToggle from '@schibstedspain/react-ab-testing-toggle'
 import {createExperimentUseCase} from './optimizely-x'
@@ -25,8 +24,15 @@ class AbTestOptimizelyXExperiment extends Component {
 AbTestOptimizelyXExperiment.displayName = 'AbTestOptimizelyXExperiment'
 
 AbTestOptimizelyXExperiment.propTypes = {
-  experimentId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
-  children: PropTypes.arrayOf(PropTypes.element).isRequired
+  /**
+   * Set of variations identified by `variationId` prop.
+   * `defaultVariation` defines the fallback variation to show in case none is defined.
+   */
+  children: PropTypes.arrayOf(PropTypes.element).isRequired,
+  /**
+   * Id of the experiment to get variation from.
+   */
+  experimentId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
 }
 
 export default AbTestOptimizelyXExperiment
