@@ -7,8 +7,6 @@
     "phoenix": "rm -Rf node_modules && npm i && sui-studio clean-modules && sui-studio run-all npm i",
     "co": "sui-studio commit",
     "lint": "sui-lint js && sui-lint sass",
-    "start": "NODE_ENV=development sui-studio start",
-    "test": "jest",
     "commitmsg": "validate-commit-msg",
     "precommit": "sui-precommit run"
   },
